@@ -1,21 +1,7 @@
-介绍
-自从Fragment出现，曾经有段时间，感觉大家谈什么都能跟Fragment谈上关系，做什么都要问下Fragment能实现不~~~哈哈，是不是有点过~~~
-本篇博客力求为大家说明Fragment如何产生，什么是Fragment，Fragment生命周期，如何静态和动态的使用Fragment，Fragment回退栈，Fragment事务；以及Fragment的一些特殊用途，例如：没有布局的Fragment有何用处？Fragment如何与Activity交互？Fragment如何创建对话框？Fragment如何与ActionBar集成等等。
-1、Fragment的产生与介绍
-Android运行在各种各样的设备中，有小屏幕的手机，超大屏的平板甚至电视。针对屏幕尺寸的差距，很多情况下，都是先针对手机开发一套App，然后拷贝一份，修改布局以适应平板神马超级大屏的。难道无法做到一个App可以同时适应手机和平板么，当然了，必须有啊。Fragment的出现就是为了解决这样的问题。你可以把Fragment当成Activity的一个界面的一个组成部分，甚至Activity的界面可以完全有不同的Fragment组成，更帅气的是Fragment拥有自己的生命周期和接收、处理用户的事件，这样就不必在Activity写一堆控件的事件处理的代码了。更为重要的是，你可以动态的添加、替换和移除某个Fragment。
-2、Fragment的生命周期
-Fragment必须是依存与Activity而存在的，因此Activity的生命周期会直接影响到Fragment的生命周期。官网这张图很好的说明了两者生命周期的关系：
-
-可以看到Fragment比Activity多了几个额外的生命周期回调方法：
-onAttach(Activity)
-当Fragment与Activity发生关联时调用。
-onCreateView(LayoutInflater, ViewGroup,Bundle)
-创建该Fragment的视图
-onActivityCreated(Bundle)
-当Activity的onCreate方法返回时调用
-onDestoryView()
-与onCreateView想对应，当该Fragment的视图被移除时调用
-onDetach()
-与onAttach相对应，当Fragment与Activity关联被取消时调用
-注意：除了onCreateView，其他的所有方法如果你重写了，必须调用父类对于该方法的实现
-
+浠嬬粛
+Fragment demo
+demo 鏈夊洓涓狥ragment鐣岄潰锛岀偣鍑昏烦鍒扮浉搴旂殑鐣岄潰
+![image](http://github.com/huangab/Fragment-master/raw/master/images/Fragment-1.jpg)
+![image](http://github.com/huangab/Fragment-master/raw/master/images/Fragment-2.jpg)
+![image](http://github.com/huangab/Fragment-master/raw/master/images/Fragment-3.jpg)
+![image](http://github.com/huangab/Fragment-master/raw/master/images/Fragment-4.jpg)
